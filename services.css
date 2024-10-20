@@ -1,0 +1,155 @@
+
+
+/* General styling for body */
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    height: 100%;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Ensure the footer always appears after content */
+footer {
+    position: relative; /* Change absolute positioning */
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+}
+
+/* Adjust background settings */
+.bg {
+    width: 100%;
+    background: white;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    user-select: none;
+    color: rgba(0, 0, 0, 0.1);
+}
+
+/* Remove excessive height and fixed positioning */
+.pic1, .pic2, .pic3, .pic4, .pic5, .pic6 {
+    margin: 20px auto;
+    width: 80%;
+    height: auto;
+}
+
+/* Flexbox container */
+.wrapper {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the boxes */
+    background-color: #ffff12;
+}
+
+.box {
+    width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.imgbox {
+    width: 100%;
+    height: auto;
+}
+
+.imgbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dynamic content for better responsiveness */
+.content {
+    width: 100%;
+    padding: 20px;
+    text-align: justify;
+}
+
+.content h1 {
+    font-size: 24px;
+}
+
+.content p {
+    font-size: 16px;
+}
+
+.btn1 {
+    width: 90%;
+    margin: 10px auto;
+    background-color: black;
+    color: red;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+/* Media Query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .box {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    footer {
+        margin-top: 30px;
+    }
+}
+
+/* Media Query for screens smaller than 480px (mobile phones) */
+@media (max-width: 480px) {
+    .bg {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .wrapper {
+        display: block;
+    }
+
+    .box {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .content h1 {
+        font-size: 20px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .btn1 {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    footer {
+        margin-top: 40px;
+        padding: 15px;
+    }
+}
